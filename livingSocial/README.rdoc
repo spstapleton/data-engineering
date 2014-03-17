@@ -1,14 +1,14 @@
 == README
 Setup:
 
-This site was developed against ruby-1.9.3-p286 (ruby can be installed from: https://www.ruby-lang.org/en/downloads/)<br />
-It uses SQLite as its database.<br />
-To set up the site please ensure you have ruby and the gem 'bundler' installed<br />
-Once the project is checked out cd into the directory 'livingSocial'<br />
-Then run bundle install to install the gems required to run this app. (ensure your ~/.gemrc file includes https://rubygems.org/ as a source)<br />
-Once the gems have been install you can use the command 'rails s -p3000' to start the rails app<br />
-It is important to run the site on port 3000 as that is what google auth is expecting<br />
-From here you can load the site in your prefered browser (tested in chrome 33.0.1750.149)<br />
+This site was developed against ruby-1.9.3-p286 (ruby can be installed from: https://www.ruby-lang.org/en/downloads/). 
+It uses SQLite as its database.
+To set up the site please ensure you have ruby and the gem 'bundler' installed.
+Once the project is checked out cd into the directory 'livingSocial'.
+Then run bundle install to install the gems required to run this app. (ensure your ~/.gemrc file includes https://rubygems.org/ as a source).
+Once the gems have been install you can use the command 'rails s -p3000' to start the rails app.
+It is important to run the site on port 3000 as that is what google auth is expecting.
+From here you can load the site in your prefered browser (tested in chrome 33.0.1750.149).
 
 You can view any of the data from the site without logging in.  If you wish to import a new order you must log in with a
 google account from the link in the top right corner of the site.
