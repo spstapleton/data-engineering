@@ -1,12 +1,13 @@
 == README
 Setup:
 
-This site was developed against ruby-1.9.3-p286 (ruby can be installed from: https://www.ruby-lang.org/en/downloads/). 
-It uses SQLite as its database.
+This site was developed against ruby-1.9.3-p286 (ruby can be installed from: https://www.ruby-lang.org/en/downloads/).
+It uses SQLite as its database (may need to be installed. see: https://sqlite.org/download.html).
 To set up the site please ensure you have ruby and the gem 'bundler' installed.
 Once the project is checked out cd into the directory 'livingSocial'.
 Then run bundle install to install the gems required to run this app. (ensure your ~/.gemrc file includes https://rubygems.org/ as a source).
-Once the gems have been install you can use the command 'rails s -p3000' to start the rails app.
+Once the gems have been install ensure the db is set up by running the commands 'rake db:reset' and 'rake db:migrate'.
+You can use the command 'rails s -p3000' to start the rails app.
 It is important to run the site on port 3000 as that is what google auth is expecting.
 From here you can load the site in your prefered browser (tested in chrome 33.0.1750.149).
 
