@@ -1,0 +1,26 @@
+<div class="navbar navbar-default" role="navigation">
+  <div class="navbar-inner">
+    <div class="container">
+
+      <%= link_to 'LivingSocial'.html_safe, root_path, :class => 'brand' %>
+      <div class="nav-collapse clearfix">
+        <ul class="nav pull-left">
+          <li class="<%= 'active' if url_for({}).include? orders_path %>"><%= link_to 'Orders', orders_path %></li>
+          <li class="<%= 'active' if url_for({}) == customers_path %>"><%= link_to 'Customers', customers_path %></li>
+          <li class="<%= 'active' if url_for({}) == merchants_path %>"><%= link_to 'Merchants', merchants_path %></li>
+          <li class="<%= 'active' if url_for({}) == items_path %>"><%= link_to 'Items', items_path %></li>
+        </ul>
+        <div class="pull-right">
+        <% if current_user %>
+            Signed in as <strong><%= current_user.name %></strong>!
+            <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <% else %>
+            <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+        <% end %>
+        </div>
+      </div>
+      <!-- /.nav-collapse -->
+    </div>
+  </div>
+  <!-- /navbar-inner -->
+</div>

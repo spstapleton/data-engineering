@@ -1,0 +1,35 @@
+<div>
+  <h2>Merchants</h2>
+  <% if @merchants.blank? %>
+      <div><h3>There are currently no merchants in the system.</h3></div>
+  <% else %>
+      <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th></th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @merchants.each do |merchant| %>
+            <tr>
+              <td>
+                <%= merchant.name %>
+              </td>
+              <td>
+                <%= merchant.address %>
+              </td>
+              <td>
+                <%= link_to "View Related Orders", orders_path(merchant_id: merchant.id) %>
+              </td>
+              <td>
+                <%= link_to "View Related Items", items_path(merchant_id: merchant.id) %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+  <% end %>
+</div>

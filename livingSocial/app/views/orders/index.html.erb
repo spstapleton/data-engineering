@@ -1,0 +1,34 @@
+<div>
+  <div>
+  <h2>Orders</h2>
+    <div><a href="<%= new_order_path %>">New Orders Import</a></div>
+  <% if @orders.blank? %>
+      <div><h3>There are currently no orders in the system.</h3></div>
+  <% else %>
+      <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+          <th>Filename</th>
+          <th>Order Rows</th>
+          <th>Gross Revenue</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @orders.each do |order| %>
+            <tr>
+              <td>
+                <%= link_to order.filename, order_path(order.id) %>
+              </td>
+              <td>
+                <%= link_to order.order_rows.count, order_path(order.id) %>
+              </td>
+              <td>
+                <%= link_to order.get_order_total, order_path(order.id) %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+  <% end %>
+  </div>
+</div>
